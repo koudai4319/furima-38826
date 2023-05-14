@@ -11,9 +11,9 @@ class User < ApplicationRecord
     PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?[\d])[a-z\d]+\z/i.freeze
     validates_format_of :password, with: PASSWORD_REGEX, message: '半角英数を両方含む必要があります'
 
-    validates :family_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々]/ }
+    validates :family_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]/ }
 
-    validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々]/ }
+    validates :first_name, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]/ }
   
     validates :family_name_kana, format: { with: /\A[ァ-ヶー－]+\z/ }
 
