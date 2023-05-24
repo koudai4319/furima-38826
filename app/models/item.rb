@@ -12,7 +12,7 @@ class Item < ApplicationRecord
   belongs_to :shipping_date
 
   with_options presence: true do
-    validates :user_id
+
     validates :image
     validates :name
     validates :description
