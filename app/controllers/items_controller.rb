@@ -23,6 +23,11 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def edit
+    if @item.user_id == cerrent_user.id
+    else
+      redirect_to root_path
+    end
   private
 
   def item_params
