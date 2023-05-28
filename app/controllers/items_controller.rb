@@ -28,9 +28,6 @@ class ItemsController < ApplicationController
     if @item.user_id != current_user.id
       redirect_to root_path
     end
-    unless user_signed_in?
-      render :new
-    end
   end
 
   def update
